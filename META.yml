@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Linux-UserXAttr
-version:            0.01
+version:            0.02
 abstract:           Support for extended file attributes on Linux
 author:
     - Torsten Förtsch <torsten.foertsch@gmx.net>

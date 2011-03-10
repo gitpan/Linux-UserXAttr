@@ -6,6 +6,11 @@ unless ($^O eq 'linux') {
     exit 0;
 }
 
+exit 0
+    if ($ENV{AUTOMATED_TESTING} and
+	system q{echo -e '#include <sys/types.h>\n#include <attr/xattr.h>' |
+                 gcc -xc -E - >/dev/null 2>&1});
+
 WriteMakefile(
     NAME           => 'Linux::UserXAttr',
     VERSION_FROM   => 'lib/Linux/UserXAttr.pm',

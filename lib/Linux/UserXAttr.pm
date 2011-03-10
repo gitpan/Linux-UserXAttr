@@ -13,7 +13,7 @@ our %EXPORT_TAGS=
 $EXPORT_TAGS{all}=[map {@{$EXPORT_TAGS{$_}}} keys %EXPORT_TAGS];
 our @EXPORT_OK=@{$EXPORT_TAGS{all}};
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require XSLoader;
 XSLoader::load('Linux::UserXAttr', $VERSION);
